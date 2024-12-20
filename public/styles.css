@@ -1,0 +1,143 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --primary-color: #4a9eff;
+    --secondary-color: #2d2d2d;
+    --border-color: #333333;
+    --hover-color: #3a3a3a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: var(--hover-color);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+#winner {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #d9534f;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.game-title {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.room-controls {
+    margin-bottom: 30px;
+}
+
+input {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.game-status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.room-info {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.player-info {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-board {
+        max-width: 280px;
+    }
+    
+    input {
+        margin-bottom: 10px;
+        width: calc(100% - 30px);
+    }
+}
