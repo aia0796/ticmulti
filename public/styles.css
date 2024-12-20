@@ -127,6 +127,41 @@ input {
     margin: 10px 0;
 }
 
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease-in-out;
+}
+
+.notification.show {
+    right: 20px;
+}
+
+.leaderboard {
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.leaderboard h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.leaderboardContent {
+    margin-top: 10px;
+    text-align: left;
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 10px;
@@ -139,5 +174,9 @@ input {
     input {
         margin-bottom: 10px;
         width: calc(100% - 30px);
+    }
+
+    .leaderboard {
+        max-width: 100%;
     }
 }
